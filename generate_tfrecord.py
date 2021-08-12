@@ -132,4 +132,4 @@ def main(_):
 
 
 if __name__ == "__main__":
-    absl.run()
+    tf.compat.v1.app.run()
