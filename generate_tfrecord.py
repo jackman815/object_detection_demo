@@ -86,7 +86,7 @@ def create_tf_example(group, path, label_map):
                 "image/height": dataset_util.int64_feature(height),
                 "image/width": dataset_util.int64_feature(width),
                 "image/filename": dataset_util.bytes_feature(filename),
-                "image/source_id": dataset_util.bytes_feature(filename),
+                "image/source_id": dataset_util.bytes_feature(os.path.splitext(filename)[0]),
                 "image/encoded": dataset_util.bytes_feature(encoded_jpg),
                 "image/format": dataset_util.bytes_feature(image_format),
                 "image/object/bbox/xmin": dataset_util.float_list_feature(xmins),
